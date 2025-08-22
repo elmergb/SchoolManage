@@ -5,6 +5,7 @@ public class TeacherPanel {
     static Scanner sc = new Scanner(System.in);
     public static ArrayList<Student> stu = new ArrayList<>();
     public static ArrayList<String> subj = new ArrayList<>();
+    
         public static Student addStudent(){
         try {
             System.out.print("Name: ");
@@ -67,7 +68,6 @@ public class TeacherPanel {
             stu.add(newStudent);
             newStudent.setSubjects(Subject.assignSubjects(newStudent));
             newStudent.displayStudent();
-            newStudent.displaySubjects();
             return newStudent;
         } catch (Exception e) {
             System.out.println(e.getMessage());

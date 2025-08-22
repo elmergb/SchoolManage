@@ -27,7 +27,7 @@ public class StudentPanel {
         System.out.print("Enter Course: ");
         String sec = sc.nextLine().toUpperCase();
         
-        boolean isfound =false;
+        boolean isfound = true;
         for (Student s : TeacherPanel.stu) {
             if (s.course != null && s.course.equalsIgnoreCase(sec)) {
                 System.out.println(s.name + " " + s.lname + "\n" + s.course );
@@ -47,11 +47,12 @@ public class StudentPanel {
         System.out.print("Enter name: ");
         String name = sc.nextLine();
 
-        boolean isfound = false;
+        boolean isfound = true;
         for (Student s : TeacherPanel.stu) {
             if(s.name.equalsIgnoreCase(name)){
                 System.out.println("==========Found===============");
                 System.out.println("ID: " + s.id + "\nName: " + s.name + "\n" + "Last Name: " + s.lname + "\n" + s.course );
+                s.displaySubjects();
                 System.out.println("==============================");
                 isfound = true;
             }

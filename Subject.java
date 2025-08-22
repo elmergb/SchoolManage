@@ -11,9 +11,7 @@ class Subject {
         this.units = units;
     }
 
-    public String getSubjectCode() { return subjectCode;}
-    public String getSubjectName() { return subjectName;}
-    public int getUnits() { return units;}
+
     
     @Override
     public String toString() {
@@ -23,7 +21,7 @@ class Subject {
 public static ArrayList<Subject> assignSubjects(Student s) {
         ArrayList<Subject> subjects = new ArrayList<>();
         String course = s.getCourse().toUpperCase();
-
+        
         switch (course) {
             case "BSIT" -> {
                 subjects.add(new Subject("IT101", "Intro to Programming", 3));
@@ -50,5 +48,7 @@ public static ArrayList<Subject> assignSubjects(Student s) {
 
         return subjects;
     }
+
+
 }
 

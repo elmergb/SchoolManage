@@ -47,24 +47,25 @@ public class Student {
     
     private ArrayList<Subject> subjects = new ArrayList<>();
 
-    public void setSubjects(ArrayList<Subject> subjects) {
+    public void setSubjects(ArrayList<Subject> subjects){
         this.subjects = subjects;
     }
 
-    public ArrayList<Subject> getSubjects() {
+    public ArrayList<Subject> getSubject(){
         return subjects;
     }
 
-    public void displaySubjects() {
-        if (subjects.isEmpty()) {
-            System.out.println("No subjects assigned.");
+    public void displaySubjects(){
+        if (subjects.isEmpty()){
+            System.out.println("No subject assigned");
         } else {
-            System.out.println("Subjects for " + course + ":");
-            for (Subject sub : subjects) {
-                System.out.println(sub);
+            System.out.println("Subjec for " + course + ":");
+            for (Subject subj : subjects){
+                System.out.println(subj);
             }
         }
     }
+
     public void displayStudent(){
         System.out.println("=============================");
         System.out.println(
